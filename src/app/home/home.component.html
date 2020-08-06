@@ -1,0 +1,45 @@
+<!-- You can now use your library component in app.component.html -->
+<div class="text-slider-container">
+  <div class="start-left">
+    <h3>Rafting events:</h3>
+
+    <ngx-slick-carousel class="carousel slider-4 slider-padding mt-4" #slickModal="slick-carousel"
+      [config]="slideConfig" (init)="slickInit($event)" (breakpoint)="breakpoint($event)"
+      (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
+      <div class="item slide" ngxSlickItem *ngFor="let slide of slides">
+        <div class="d-block block-testimony mx-auto text-center">
+
+          <div class="event position-relative bg-dark">
+            <img src="https://www.malafaat.com/wp-content/uploads/2018/11/Events-1.jpg" alt="" class="w-100 ">
+            <div class=" event-info text-white p-3">
+
+              <h5 class="text-white event-title ">Surfing in Wadi Adventure, Al Ain</h5>
+
+              <div class="date">
+                <i class="fas fa-calendar"></i> <span> july, 28 2020</span>
+              </div>
+              <div class="location">
+                <i class="fas fa-map-marker-alt"></i> <span> Wadi Adventure, Al Ain </span>
+              </div>
+
+            </div>
+
+            <a href="events-details.html" class="position-absolute view-event">
+              <i class="fas fa-search text-white   "></i>
+            </a>
+
+
+
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </ngx-slick-carousel>
+
+  </div>
+</div>
+
+<!-- ======================== new carousel loop fix ========================== -->
